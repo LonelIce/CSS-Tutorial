@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@700&family=Wallpoet&display=swap');
+
+.fontsLink,
+.fontsImport {
+	border: solid 3px;
+	width: 500px;
+}
+
+.fl1 {
+	font-family: 'Underdog', system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.fl2 {
+	font-family: 'Bungee Spice', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.fl3 {
+	font-family: 'Workbench', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: 'BLED' 0, 'SCAN' 0;
+}
+
+.fl4 {
+	font-family: 'Roboto', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: italic;
+	font-variation-settings: 'wdth' 81.4;
+}
+
+.fi1 {
+	font-family: 'Wallpoet', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.fi2 {
+	font-family: 'Edu AU VIC WA NT Arrows', cursive;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}

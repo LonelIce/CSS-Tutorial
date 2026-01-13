@@ -1,0 +1,27 @@
+.block1 {
+	color: red;
+}
+.p1 {
+	color: blue;
+}
+
+.block2 {
+	color: blue;
+}
+.p2 {
+	color: red;
+}
+
+.example {
+	border: 1px black solid;
+}
+
+/*Свойстро important игнорирует каскадность, то есть будет применен стиль синего цвета*/
+
+.block3 .p3 {
+	color: red;
+}
+
+.p3 {
+	color: blue !important;
+}

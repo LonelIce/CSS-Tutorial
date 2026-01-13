@@ -1,0 +1,76 @@
+<!--Подключение стилей-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Подключение стилей</title>
+		<!--Подключаем внешние стили-->
+		<link type="text/css" rel="stylesheet" href="styles.css" />
+		<!--Допоснительный слиль для другого экрана-->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="styles480.css"
+			media="screen and (max-device-width: 480px)"
+		/>
+		<!--Стили для печати-->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="styles_print.css"
+			media="print"
+		/>
+		<!--Подключение стилей в самом HTML
+    Атрибут type="text/css" говорит браузеру какой тип стиля будет использоваться (пока известен лишь этот тип стиля)   
+    Можно писать стили прямо здесь. 
+    -->
+		<style type="text/css">
+			body {
+				background-color: rgb(168, 170, 168);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Подключение стилей</h1>
+		<pre>
+			<code>
+		&lthead&gt
+			&ltmeta charset="utf-8" /&gt
+			&lttitle>Подключение стилей&lt/title&gt
+
+			&lt!--Подключаем внешние стили--&gt
+			&ltlink type="text/css" rel="stylesheet" href="styles.css" / &gt
+
+			&lt!--Допоснительный слиль для другого экрана--&gt
+			&ltlink
+				rel="stylesheet"
+				type="text/css"
+				href="styles480.css"
+				media="screen and (max-device-width: 480px)"
+			/&gt
+
+			&lt!--Стили для печати--&gt
+			&ltlink
+			rel="stylesheet"
+			type="text/css"
+			href="styles_print.css"
+			media="print"
+			/&gt
+
+			&lt!--Подключение стилей в самом HTML. Атрибут type="text/css" говорит браузеру какой тип стиля будет использоваться (пока известен лишь этот тип стиля). Можно писать стили прямо здесь.--&gt
+			&ltstyle type="text/css"&gt
+				body {
+					background-color: rgb(168, 170, 168);
+				}
+			&lt/style&gt
+		&lt/head&gt
+			</code>
+		</pre>
+		<nav>
+			<ul>
+				<li><a href="../index.html">На главную</a></li>
+				<li><a href="1.1 Cascading/index.html">Каскадность</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

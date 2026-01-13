@@ -1,0 +1,24 @@
+/*Популярные антиквенные шрифты*/
+h2 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: Baskerville, 'Palatino Linotype', Times, serif;
+	font-family: 'Hoefler Text', Garomond, Times, serif;
+}
+
+/*Популярные рубленые шрифты*/
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-family: Tahoma, 'Lucida Grande', Arial, Helvetica, sans-serif;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	font-family: 'Century Gothic', 'Gill Sans', Arial, sans-serif;
+}
+
+/*Популярные моноширенные и декоративные шрифты (буквы одинаковой ширины, идеальны для написания кода)*/
+h4 {
+	font-family: 'Courier New', 'Courier New', Courier, monospace;
+	font-family: 'Lucida Console', Monaco, monospace;
+	font-family: 'Copperplate Light', 'Copperplate Gothic Light', serif;
+	font-family: 'Marker Felt', 'Comic Sans MS', fantasy;
+}

@@ -1,0 +1,86 @@
+/*Простой селектор тега*/
+body {
+	font-family: Oswald, Aial, sans-serif;
+	font-weight: bold;
+}
+
+/*Универсальный селектор
+	Применяется для всех элементов страницы*/
+* {
+	font-weight: bold;
+}
+
+/* * Можно применять в составе селекторов потомков. Стиль примется ко всем потомкам но не к самому классу */
+.banner * {
+	color: aqua;
+}
+.banner {
+	/*Для восприятия*/
+	border: solid;
+	width: 300px;
+}
+
+/*Все абзаци с классом tea
+	Название класса чувствительно к регистру
+	Название класса может содержать  лат.буквы, цифры, дефис и подчеркивание, но должны начинаться именно с буквы
+*/
+p.tea {
+	color: antiquewhite;
+}
+
+/*весь класс tea*/
+.tea {
+	background-color: rgb(100%, 50%, 0%);
+}
+
+/*Только p c класс tea. БЕЗ ПРОБЕЛА. Старайся избегать такого*/
+p.tea {
+	color: aquamarine;
+}
+
+/*Элемент с id*/
+#footer {
+	color: rgb(100%, 50%, 0%);
+}
+
+/*Элемент <p> с id*/
+p#footer {
+	color: rgb(100%, 50%, 0%);
+}
+
+/*Множественный идентификатор*/
+h1,
+article,
+.link {
+	color: rgb(0, 253, 76);
+}
+.block2 {
+	width: 300px;
+	border: solid;
+}
+
+/*СЕЛЕКТОРЫ АТРИБУТОВ*/
+
+/*Селектор всех изображений с атрибутом width*/
+img[width] {
+	border: black thin solid;
+}
+img[alt='noob'] {
+	border: #fc0000 thin solid;
+}
+input[type='text'] {
+	color: aquamarine;
+}
+a[href^="https://"]
+{
+	/*Символ ^ говорит "начинается на"*/
+	color: #fc0000;
+}
+a[href$='.pdf'] {
+	/*символ $ говорит "заканчивается на"*/
+	color: aquamarine;
+}
+img[src*='photo'] {
+	/*символ * говорит "имеется"*/
+	width: 200;
+}

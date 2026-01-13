@@ -1,0 +1,13 @@
+article {
+	border: 3px solid black;
+}
+
+pre,
+.result {
+	border: 2px solid black;
+	margin: 10px;
+}
+
+.text_shadow {
+	text-shadow: 4px 3px 6px rgba(0, 0, 0, 0.75);
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Каскадность</title>
+		<link rel="stylesheet" href="stylesCascading.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../../index.html">На главную </a>
+			</nav>
+		</header>
+		<h1>Каскадность</h1>
+		<div>
+			Каскадность - это ряд правил определяющих, какие именно свойства стилей
+			применяются к элементам веб-страницы.
+		</div>
+		<ol>
+			Правила
+			<li>
+				Превосходство ближайших предков. Стиль ближайшего предка приоритетней
+				дальнего.
+				<div class="code">
+					Пример кода
+					<pre class="example">
+						<code>
+&ltdiv class="block1"&gt 
+	&ltp class="p1"&gt 
+		&ltstrong&gt 
+			Цвет
+		&lt/strong&gt 
+	&lt/p&gt 
+&lt/div&gt
+						</code>
+					</pre>
+				</div>
+				<div class="css_text">
+					CSS-код
+					<pre class="example">
+							<code>
+.block1 {
+	color: red;
+}
+.p1 {
+	color: blue;
+}
+							</code>
+						</pre>
+				</div>
+				<div>
+					Результат
+					<div class="block1 example">
+						<p class="p1">
+							<strong> Цвет </strong>
+						</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				Преимущество непосредственно примененного стиля
+				<div class="code">
+					Пример кода
+					<pre class="example">
+						<code>
+&ltdiv class="block2"&gt
+	&ltp class="p2">Цвет&lt/p&gt
+&lt/div&gt
+						</code>
+					</pre>
+				</div>
+
+				<div class="css_text">
+					CSS-код
+					<pre class="example">
+							<code>
+.block2 {
+	color: blue;
+}
+.p2 {
+	color: red;
+}
+							</code>
+						</pre>
+				</div>
+				<div>
+					Результат
+					<div class="block2 example">
+						<p class="p2">Цвет</p>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				Имеют преимущество стили самого близкого по отношению к форматированному
+				элементу, самого специфичного стиля.
+				<ul>
+					Определение приоритетов (чем больше, тем выше приоритет)
+					<li>Селектор тегов имеет 1 УЕ</li>
+					<li>Класс имеет 10 УЕ, а ID - 100 УЕ</li>
+					<li>Строчный стиль написания стилей (в коде HTML) имеет 1000 УЕ</li>
+					<li>
+						Следует помнить, что данные значения могут складываться: div p {}
+						равен 2 УЕ
+					</li>
+				</ul>
+			</li>
+			<li>
+				Если приоритет одинаковый то результатом конфликта выберется
+				последний(нижний)
+			</li>
+			<li>
+				Если внутренние стили HTML страницы (тег style) идут после подключения
+				внешних стилей, то они будут приоритетней.
+			</li>
+			<li>
+				При наличии свойства !important касдадность игнорируется
+				<div class="code">
+					Пример кода
+					<pre class="example">
+						<code>
+&ltdiv class="block3"&gt
+	&ltp class="p3">Цвет&lt/p&gt
+&lt/div&gt
+						</code>
+					</pre>
+				</div>
+
+				<div class="css_text">
+					CSS-код
+					<pre class="example">
+							<code>
+.block3 .p3 { 20УЕ
+	color: red;
+}
+
+.p3 { 10УЕ
+	color: blue !important;
+}
+							</code>
+						</pre>
+				</div>
+				<div>
+					Результат
+					<div class="block3 example">
+						<p class="p3">Цвет</p>
+					</div>
+				</div>
+			</li>
+		</ol>
+	</body>
+</html>

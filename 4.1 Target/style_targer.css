@@ -1,0 +1,8 @@
+#signupForm {
+	display: none;
+}
+
+/*Включится только когда форма станет целевой, отразится в URL*/
+#signupForm:target {
+	display: block;
+}

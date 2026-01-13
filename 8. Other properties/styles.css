@@ -1,0 +1,82 @@
+.text {
+	/*Отступ*/
+	padding: 10px; /*отступ со всех сторон*/
+	padding: 0 10px; /*верх-низ, право-лево*/
+	padding: 0 10px 20px; /*верхнее, лево-право, нижнее*/
+	padding: 0 10% 20% 5%; /*сверху, справа, снизу, слева*/
+	/*Поле*/
+	margin: 10px; /* со всех сторон*/
+	margin: 0 10px; /*верх-низ, право-лево*/
+	margin: 0 10px 20px; /*верхнее, лево-право, нижнее*/
+	margin: 0 10px 20px 5px; /*сверху, справа, снизу, слева*/
+}
+
+.border-present {
+	margin: 10px;
+	padding: 20px;
+	font-size: 24px;
+	display: inline-block;
+}
+
+.b-solid {
+	border: 6px solid rgb(255, 0, 0);
+}
+
+.b-dashed {
+	border: 6px dashed rgb(255, 0, 0);
+}
+
+.b-dotted {
+	border: 6px dotted rgb(255, 0, 0);
+}
+
+.b-double {
+	border: 6px double rgb(255, 0, 0);
+}
+
+.b-groove {
+	border: 6px groove rgb(255, 0, 0);
+}
+
+.b-inset {
+	border: 6px inset rgb(255, 0, 0);
+}
+
+.b-outset {
+	border: 6px outset rgb(255, 0, 0);
+}
+
+.b-ridge {
+	border: 6px ridge rgb(255, 0, 0);
+}
+
+.b-none {
+	border: 6px none rgb(255, 0, 0);
+}
+
+.b-hidden {
+	border: 6px hidden rgb(255, 0, 0);
+}
+
+.bg {
+	width: 150px;
+	height: 150px;
+}
+
+.bg-c1 {
+	background-color: rgb(247, 226, 155);
+}
+
+.bg-c2 {
+	background-color: rgba(9, 218, 19, 0.1);
+}
+
+.bg-c3 {
+	border: 6px dotted rgb(255, 0, 0);
+	background-color: rgba(31, 8, 230, 0.1);
+}
+.bg-c4 {
+	border: 6px dotted rgb(255, 0, 0);
+	background-color: rgba(31, 8, 230, 0.1);
+	background-clip: padding-box;
+}

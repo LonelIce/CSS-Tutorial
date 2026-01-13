@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Псевдоэлементы и псевдоклассы</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<p id="f_l">First-letter</p>
+
+		<p id="f_line">
+			first-line Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Dolores, itaque quia quos, similique inventore enim pariatur debitis
+			provident repudiandae illum commodi nostrum. Necessitatibus quaerat ipsam
+			cupiditate tenetur blanditiis quae quo!
+		</p>
+
+		<input type="text" placeholder="focus" class="fcs" />
+
+		<div class="tip">Блок с before и after</div>
+
+		<div class="sel">
+			::selection Изменяет цвет при выделении <br />Lorem ipsum dolor sit amet
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+			voluptas deserunt assumenda, facilis ab architecto laboriosam magni eos
+			sequi repellat, velit quasi fugit sed natus expedita adipisci? Nostrum,
+			eligendi id? Voluptate, nam itaque nemo corporis quidem, suscipit, ex quos
+			earum natus iusto est eaque maxime. Alias delectus quasi quae neque at
+			nisi natus, provident voluptatum, voluptate nobis quisquam atque aperiam?
+		</div>
+
+		<div class="f_child">
+			:first-child
+			<section>
+				section1
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+				<p>4</p>
+			</section>
+			<section>
+				section2
+				<p>1</p>
+				<p>2</p>
+				<p>3</p>
+				<p>4</p>
+			</section>
+		</div>
+
+		<div class="o_child">
+			:only-child
+			<time class="time" datetime="28/08/2025">28/08/2025</time>
+		</div>
+
+		<div class="l_child">
+			:last-child и :first-child
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+		</div>
+
+		<ul class="ul1">
+			.ul1 :nth-child(odd) и .ul1 :nth-child(even)
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+
+		<ul class="ul2">
+			:nth-child(5n)
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+
+		<ul class="ul3">
+			.ul3 :nth-child(5)
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+
+		<ul class="ul4">
+			.ul4:nth-child(3n + 2)
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+
+		<ul class="ul5">
+			:nth-child(-2n + 5)
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+
+		<div class="sidebar1">
+			:last-of-type и :first-of-type
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+		</div>
+
+		<div class="sidebar2">
+			.p1:nth-of-type(odd) и .p1:nth-of-type(even)
+			<p class="p1">1</p>
+			<p class="p1">2</p>
+			<p class="p1">3</p>
+			<p class="p1">4</p>
+			<p class="p1">5</p>
+		</div>
+
+		<div class="sidebar3">
+			.sidebar3:not(.p2c)
+			<p class="p2">p2</p>
+			<p class="p2c">p2c</p>
+			<p class="p2">p2</p>
+			<p class="p2">p2</p>
+			<p class="p2">p2</p>
+			<p class="p2">p2</p>
+		</div>
+	</body>
+</html>

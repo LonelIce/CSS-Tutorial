@@ -1,0 +1,35 @@
+/*Таблица*/
+#table {
+	background-color: brown;
+	display: table;
+}
+
+#tableRow {
+	display: table-row;
+	background-color: beige;
+}
+
+#main,
+#sidebar {
+	display: table-cell;
+	background-color: blue;
+	vertical-align: top;
+}
+
+/*Коментарий*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+tr:nth-child(odd) {
+	background-color: aquamarine;
+}
+
+/*Сочетание селекторов ЧЁТ НЕ РАБОТАЕТ*/
+p#blueberry p:first-letter {
+	color: rgb(15, 180, 0);
+}
+
+@media screen and (min-device-width: 480px) {
+	body {
+		font-family: Times, serif;
+	}
+}

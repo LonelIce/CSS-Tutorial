@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Другие свойства</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../index.html">На главную</a>
+			</nav>
+		</header>
+		<h1>Другие свойства</h1>
+		<section>
+			<ul>
+				<li>
+					<article>
+						<h2>margin, padding</h2>
+						<span class="description"> Добавление отступов и полей</span>
+						<div>
+							CSS:
+							<pre>
+                <code>
+.text{
+/*Отступ*/
+padding: 10px; /*отступ со всех сторон*/
+padding: 0 10px; /*верх-низ, право-лево*/
+padding: 0 10px 20px;/*верхнее, лево-право, нижнее*/
+padding: 0 10% 20% 5%;/*сверху, справа, снизу, слева*/
+/*Поле*/
+margin: 10px;/* со всех сторон*/
+margin: 0 10px;/*верх-низ, право-лево*/
+margin: 0 10px 20px;/*верхнее, лево-право, нижнее*/
+margin: 0 10px 20px 5px;/*сверху, справа, снизу, слева*/
+}
+                </code>
+              </pre>
+						</div>
+						Нюансы
+						<ul>
+							<li>
+								Если сталкиваются верхнее и нижнее поле разных элементов, то они
+								не суммируются. ВЫбирается размер найбольшего поля, а меньшее
+								удаляется. Хочешь сложения- используй отступ либо границу.
+							</li>
+							<li>
+								Добавление к строчному элементу (кроме <code>&ltimg&gt</code>)
+								верхнего, нижнего поля или отступа не изменит высоту элемента.
+								Для элемента нужно применить:
+								<code> display: inline-block;</code>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<article>
+						<h2>display</h2>
+						<span class="description"> Строчные, блочные, блочные в ряд</span>
+						<div>
+							CSS:
+							<pre>
+                <code>
+display: block;/*делает элемент блочным*/
+display: inline;/*делает элемент строчным*/
+display: inline-block;/* убирает разрывы до и после, добавляет поля ввреху и снизу*/
+display: none;/*скрывает элементы*/
+                </code>
+              </pre>
+						</div>
+					</article>
+				</li>
+				<li>
+					<article>
+						<h2>border</h2>
+						<span class="description">Добавление границы к элементу</span>
+						<div>
+							HTML:
+							<pre>
+                <code>
+&ltdiv class="b-solid"&gtsolid&lt/iv&gt
+&ltdiv class="b-dashed"&gtdashed&lt/ltiv&gt
+&ltdiv class="b-dotted"&gtdotted&lt/div&gt
+&ltdiv class="b-double"&gtdouble&lt/div&gt
+&ltdiv class="b-groove"&gtgroove&lt/div&gt
+&ltdiv class="b-inset"&gtinset&lt/div&gt
+&ltdiv class="b-outset"&gtoutset&lt/div&gt
+&ltdiv class="b-ridge"&gtridge&lt/div&gt
+&ltdiv class="b-none"&gtnone&lt/div&gt
+&ltdiv class="b-hidden"&gthidden&lt/div&gt
+                </code>
+              </pre>
+						</div>
+						<div>
+							CSS:
+							<pre>
+                <code>
+.b-solid {
+	border: 6px solid rgb(255, 0, 0);
+}
+
+.b-dashed {
+	border: 6px dashed rgb(255, 0, 0);
+}
+
+.b-dotted {
+	border: 6px dotted rgb(255, 0, 0);
+}
+
+.b-double {
+	border: 6px double rgb(255, 0, 0);
+}
+
+.b-groove {
+	border: 6px groove rgb(255, 0, 0);
+}
+
+.b-inset {
+	border: 6px inset rgb(255, 0, 0);
+}
+
+.b-outset {
+	border: 6px outset rgb(255, 0, 0);
+}
+
+.b-ridge {
+	border: 6px ridge rgb(255, 0, 0);
+}
+
+.b-none {
+	border: 6px none rgb(255, 0, 0);
+}
+
+.b-hidden {
+	border: 6px hidden rgb(255, 0, 0);
+}
+                </code>
+              </pre>
+						</div>
+						<div>
+							Результат:
+							<div class="b-solid border-present">solid</div>
+							<div class="b-dashed border-present">dashed</div>
+							<div class="b-dotted border-present">dotted</div>
+							<div class="b-double border-present">double</div>
+							<div class="b-groove border-present">groove</div>
+							<div class="b-inset border-present">inset</div>
+							<div class="b-outset border-present">outset</div>
+							<div class="b-ridge border-present">ridge</div>
+							<div class="b-none border-present">none</div>
+							<div class="b-hidden border-present">hidden</div>
+						</div>
+						<div>
+							Нюансы
+							<ul>
+								<li>Последовательность указания свойств неважна</li>
+								<li>
+									Можно использовать свойства отдельные для сторон:
+									<code>
+										border-top, border-bottom, border-left, border-right</code
+									>
+								</li>
+								<li>
+									Можно указывать отдельные свойства:
+									<code>border-color, border-width, border-style</code>
+								</li>
+								<li>
+									Отдельные стороны и отдельные свойства:
+									<code>border--bottom-color</code>
+								</li>
+								<li>
+									Можно сокращенно задавать значения для отдельных свойств:
+									<code
+										>border-color: red, blue, gold, grean; border-width: 10px,
+										5px, 12px, 20px:</code
+									>
+								</li>
+							</ul>
+						</div>
+					</article>
+				</li>
+				<li>
+					<article>
+						<h2>background-color</h2>
+						<span class="description"> Фоноввый цвет</span>
+						<div>
+							HTML:
+							<pre>
+                <code>
+&ltdiv class="bg-c1"&gtbackground-color: rgb(247,226,155);&lt/div&gt
+&ltdiv class="bg-c2"&gtbackground-color: rgba(9, 218, 19, 0.1);&lt/div&gt
+&ltdiv class="bg-c3"&gtborder: 6px dotted rgb(255, 0, 0); background-color: rgba(31, 8,	230, 0.1);;&lt/div&gt
+&ltdiv class="bg-c3"&gtborder: 6px dotted rgb(255, 0, 0); background-color: rgba(31, 8, 230, 0.1); background-clip: padding-box;;&lt/div&gt
+                </code>
+              </pre>
+						</div>
+						<div>
+							CSS:
+							<pre>
+                <code>
+.bg-c{
+	background-color: rgb(247,226,155);/*заливает фон цветом*/;
+} 
+.bg-c2 {
+	background-color: rgba(9, 218, 19, 0.1);
+}
+
+.bg-c3 {
+	border: 6px dotted rgb(255, 0, 0);
+	background-color: rgba(31, 8, 230, 0.1);
+}
+.bg-c4 {
+	border: 6px dotted rgb(255, 0, 0);
+	background-color: rgba(31, 8, 230, 0.1); 
+	background-clip: padding-box;
+}
+                </code>
+              </pre>
+						</div>
+						<div>
+							Результат:
+							<div class="bg-c1 bg">background-color: rgb(247,226,155);</div>
+							<div class="bg-c2 bg">
+								background-color: rgba(9, 218, 19, 0.1)
+							</div>
+							<div class="bg-c3 bg">
+								border: 6px dotted rgb(255, 0, 0); background-color: rgba(31, 8,
+								230, 0.1);
+							</div>
+							<div class="bg-c4 bg">
+								border: 6px dotted rgb(255, 0, 0); background-color: rgba(31, 8,
+								230, 0.1); background-clip: padding-box;
+							</div>
+						</div>
+						<div>
+							Нюансы
+							<ul>
+								<li>
+									Точечная и пунктирная граница сливается с фоновым цветом, это
+									можно обойти используя свойство background-clip: padding-box;
+								</li>
+							</ul>
+						</div>
+					</article>
+				</li>
+			</ul>
+		</section>
+	</body>
+</html>

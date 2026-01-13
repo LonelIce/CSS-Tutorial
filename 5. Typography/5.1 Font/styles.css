@@ -1,0 +1,188 @@
+/*Присваивает шрифту имя и показывает откуда его загрузить (для каждого формата отдельный адрес). Для каждого отдельного шрифта отдельное правило. Загружает первый поддерживаемый шрифт сверху вниз*/
+@font-face {
+	font-family: Tgromanbold;
+	src: url('assets/fonts/tgroman-bolditalic-webfont.eot'); /*Для IE9 с режимом совместимости IE8*/
+	src: url('assets/fonts/tgroman-bolditalic-webfont.eot?#iefix')
+			format('embedded-opentype'),
+		/*Для IE6-IE8*/ url('assets/fonts/tgroman-bolditalic-webfont.woff2')
+			format('woff2'),
+		url('assets/fonts/tgroman-bolditalic-webfont.woff') format('woff'),
+		url('assets/fonts/tgroman-bolditalic-webfont.ttf') format('truetype'),
+		url('assets/fonts/tgroman-bolditalic-webfont.svg#tgromanbold_italic')
+			format('svg'); /*Для Savari, очень маленькие экраны*/
+	font-weight: normal; /*обычное (нежирное) начертание*/
+	font-style: normal; /*обычное (некурсивное) начертание*/
+}
+
+/*Если разрабатываем для браузеров IE8 и более старых*/
+@font-face {
+	font-family: Tgromanbold;
+	src: url('assets/fonts/tgroman-bolditalic-webfont.eot?#iefix')
+			format('embedded-opentype'),
+		/*Для IE6-IE8*/ url('assets/fonts/tgroman-bolditalic-webfont.woff2')
+			format('woff2'),
+		url('assets/fonts/tgroman-bolditalic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: italic; /*Вариант курсивного начертания*/
+}
+
+/**Если интересуют только современные браузеры*/
+/*Если разрабатываем для браузеров IE8 и более современных*/
+@font-face {
+	font-family: Tgromanbold;
+	src: url('assets/fonts/tgroman-bolditalic-webfont.woff2') format('woff2'),
+		url('assets/fonts/tgroman-bolditalic-webfont.woff') format('woff');
+	font-weight: bold; /*Полужирная версия*/
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Tgromanbold;
+	src: url('assets/fonts/tgroman-bolditalic-webfont.woff2') format('woff2'),
+		url('assets/fonts/tgroman-bolditalic-webfont.woff') format('woff');
+	font-weight: bold; /*Полужирная версия*/
+	font-style: italic; /*И курсивная версия*/
+}
+
+.font {
+	font-family: 'Ezarion My';
+}
+
+p {
+	/*Сначала браузер смотрит на то есть ли первый шрифт, если нет, то второй, если нет и его то загружает универсальный "sans-serif" */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	/*Если в названии несколько слов, то нужны кавычки*/
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*А это уже для красоты странички*/
+.block-1-test {
+	border: solid 2px;
+	width: 600px;
+	font-family: Tgromanbold, 'Times New Roman', sans-serif;
+}
+
+/*Изменение цвета шрифта*/
+.col {
+	color: aliceblue; /*Так не делай*/
+	color: rgb(207, 127, 22); /*Так делай*/
+	color: rgba(
+		50%,
+		50%,
+		50%,
+		15
+	); /*Это с прозрачностью. Используй совместно с предыдущим, чтобы не было косяков на старых браузерах*/
+	color: #5ee4b7; /*тож можешь юзать*/
+}
+
+/*Размер шрифта*/
+.size {
+	font-size: 30px; /*Четко фиксируемая величина. По факту на устройствах с Retina-дисплеями значение умножается на два*/
+	font-size: 1em; /*По умолчанию равен 16px (чаще всего), либо наследуется. Лучше использовать это правило*/
+	font-size: 150%; /*Либо от базового шрифта, либо от наследуемого размера*/
+	font-size: 0.75rem; /*Тож используй. Процент от коревого значения, которое можно указать  для html. Позволяет избежать проблемы с наследованием шрифта. Но не поддерживаются старыми браузерами*/
+
+	font-size: xx-small;
+	font-size: x-small;
+	font-size: small;
+	font-size: medium; /*Ключевыми словами. Medium - базовый*/
+	font-size: large;
+	font-size: x-large;
+	font-size: xx-large;
+}
+
+/*Курсивное начертание, если есть такое начертание у шрифта*/
+.style {
+	font-style: italic;
+	font-style: oblique; /*тоже самое что и  italic*/
+}
+
+/*Вес(жир) шрифта,  если есть такое начертание у шрифта*/
+.weight {
+	font-weight: bold;
+	font-weight: bolder;
+	font-weight: lighter;
+	font-weight: 900; /*от 100 до 900 и касается веб шрифтов*/
+}
+
+/*Прописные буквы*/
+.tx-tr {
+	text-transform: uppercase; /*Все буквы прописные*/
+	text-transform: lowercase; /*Все буквы строчные*/
+	text-transform: capitalize; /*Первые буквы прописные*/
+	text-transform: none; /*Отключает свойство. Нужно так как свойство наследуется*/
+
+	font-variant: small-caps; /*Все буквы становятся маленькими прописными*/
+}
+
+/*Декорирование текста*/
+.tx-dec {
+	text-decoration: underline; /*Подчеркивает текст*/
+	text-decoration: overline; /*Надчеркивает*/
+	text-decoration: blink; /*Мерцающий тест. Не подходит для всех браузеров*/
+	text-decoration: line-through; /*Зачеркивает текст*/
+	text-decoration: none; /*Отключает раннее или стандартное декорирование*/
+
+	text-decoration: overline underline; /*Можно комбинировать стили*/
+}
+
+/*Межбуквенный интервал и интервал между словами*/
+.let-sp {
+	letter-spacing: -1px; /*Уменьшенный интервал*/
+	letter-spacing: 0.7em; /*Положительное значение увеличивает интервал*/
+
+	word-spacing: 2px; /*Увеличивает интервал между словами*/
+}
+
+/*Добавление тени к тексту*/
+.tx-sh {
+	text-shadow: -4px 4px 3px rgb(207, 127, 22); /*горизонтальное смещение, вертикальное смещение, степень размытости(0px-нет размытости) и цвет*/
+	text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0; /*Можно одновременно указать несколько теней, но не для старых браузеров*/
+
+	/*Прикольные варианты*/
+	text-shadow: 1px 1px 0 #f00, 2px 2px 0 #c00, 3px 3px 3px #900;
+	text-shadow: 1px 1px 0 red, 2px 2px 0 orange, 3px 3px 0 yellow,
+		4px 4px 0 green, 5px 5px 0 blue, 6px 6px 0 indigo, 7px 7px 0 violet;
+	text-shadow: 2px 2px 0 #000, -2px -2px 0 #aaa;
+	text-shadow: 2px 0 red, -2px 0 blue;
+}
+
+/*Межстрочный интервал*/
+.line-h {
+	line-height: 120%; /*Стандартный и зависит от размера шрифта. Наследуется, но не процентами а конкретно высчитаными пикселами*/
+	line-height: normal; /*Стандартный*/
+	line-height: 0.3em;
+	line-height: 1.5; /*Используй это! Умножает размер шрифта на данное значение*/
+	line-height: 15px; /*Лучше все таки в em и %*/
+}
+
+/*Выравнивание текста*/
+.tx-al {
+	text-align: left;
+	text-align: right;
+	text-align: justify; /*По ширине*/
+	text-align: center;
+}
+
+/*Отступ первой строки*/
+.tx-ind {
+	text-indent: 20px; /*Можно использовать отрицательные значения*/
+	text-indent: 5em;
+	text-indent: 50%; /*Относительно ширины элемента (Текст начнется с середины)*/
+}
+
+/*Сокращенное использование свойств*/
+.font {
+	font: italic bold small-caps 18px/1.5em Arial, sans-serif; /*font-style font-variant font-weight font-size/line-height font-family*/
+	/*Не обязательно прописывать все свойства, но нужно включить размер шрифта и семейство*/
+}
+
+/*Поля между абзацами*/
+.marg {
+	margin-top: 1em;
+	margin-bottom: 1rem;
+	margin-top: 10px;
+}

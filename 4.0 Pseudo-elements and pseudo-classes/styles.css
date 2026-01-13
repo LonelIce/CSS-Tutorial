@@ -1,0 +1,198 @@
+/*ПСЕВДОЭЛЕМЕНТЫ И ПСЕВДОКЛАССЫ*/
+/*В версии CSS3 используются "::" вместо ":", но браузеры всё равно узнают, это нужно для поддержи сайтов на IE8*/
+
+/*Стилизует первую букву блочного элемента*/
+#f_l:first-letter {
+	color: blue;
+	font-size: 20px;
+}
+#f_l {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+}
+
+/*Стилизует первую строку абзаца блочного элемента*/
+#f_line:first-line {
+	color: green;
+	font-weight: bold;
+}
+#f_line {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+}
+
+/*Работает как hover, но также при использовании клавиши tab. Полезно для полей ввода, мышка и не зависит от положения мыши*/
+.fcs:focus {
+	background-color: rgb(0, 247, 95);
+}
+.fcs {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+}
+
+/*Добавляет сообщение предшевствующее какому-то элементу. Экономит место в HTML*/
+.tip:before {
+	content: 'before-----';
+}
+/*Добавляет сообщение после какому-то элемента. Экономит место в HTML*/
+.tip:after {
+	content: '-----after';
+}
+.tip {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+	margin-top: 20px;
+}
+
+/*Позволяет изменить свойства, когда пользователь выделяет что-то, например для копирования. В нем могут быть лишь 2 свойства color и background-color. НУЖНО проверять работу в Firefox, возможно понадобится вендорный префикс*/
+.sel::selection {
+	color: rgb(248, 17, 9);
+	background-color: aqua;
+}
+.sel {
+	/*Для восприятия*/
+	width: 600px;
+	border: solid;
+	margin-top: 20px;
+}
+
+/*Применяется к первому дочернему элементу h1*/
+section:first-child {
+	background-color: green;
+}
+section {
+	/*Для восприятия*/
+	width: 600px;
+	border: solid;
+	margin-top: 20px;
+}
+.f_child {
+	/*Для восприятия*/
+	width: 700px;
+	border: solid;
+	margin-top: 20px;
+}
+
+/*Применяется к единственному дочернему элементу h3. Если есть любой другой дочерний элемент, то стиль не применится */
+time:only-child {
+	background-color: green;
+	font-size: 20px;
+}
+.o_child {
+	/*Для восприятия*/
+	width: 700px;
+	border: solid;
+	margin-top: 20px;
+}
+
+/*Применяется к последнему дочернему элементу h2 ПРОБЕЛ ОБЯЗАТЕЛЕН*/
+.l_child :last-child {
+	background-color: green;
+}
+.l_child :first-child {
+	background-color: #fc0000;
+}
+.l_child {
+	/*Для восприятия*/
+	width: 600px;
+	border: solid;
+	margin-top: 20px;
+}
+
+/*Каждый четный ПРОБЕЛ ОБЯЗАТЕЛЕН*/
+.ul1 :nth-child(odd) {
+	background-color: rgb(230, 130, 0);
+}
+/*Каждый нечетный ПРОБЕЛ ОБЯЗАТЕЛЕН*/
+.ul1 :nth-child(even) {
+	background-color: rgb(49, 245, 0);
+}
+.ul1 {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+}
+
+/*5 элемент ПРОБЕЛ ОБЯЗАТЕЛЕН*/
+.ul3 :nth-child(5) {
+	background-color: rgb(49, 245, 0);
+}
+.ul3 {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+}
+
+/*каждый 5 элемент ПРОБЕЛ ОБЯЗАТЕЛЕН*/
+.ul2 :nth-child(5n) {
+	background-color: rgb(49, 245, 0);
+}
+.ul2 {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+}
+
+/*каждый 3 элемент, начиная со 2го ПРОБЕЛ ОБЯЗАТЕЛЕН*/
+.ul4 :nth-child(3n + 2) {
+	background-color: rgb(49, 245, 0);
+}
+.ul4 {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+}
+
+/*каждый 2 элемент до 5го ПРОБЕЛ ОБЯЗАТЕЛЕН**/
+.ul5 :nth-child(-2n + 5) {
+	background-color: rgb(49, 245, 0);
+}
+.ul5 {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+}
+
+/*Дочерние псевдоклассы*/
+/*Форматирорование последнего абзаца класса .sidebar*/
+.sidebar1 p:last-of-type {
+	background-color: rgb(49, 245, 0);
+}
+/*Форматирорование первого абзаца класса .sidebar*/
+.sidebar1 p:first-of-type {
+	background-color: rgb(49, 245, 0);
+}
+.sidebar1 {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+}
+
+.sidebar2 .p1:nth-of-type(odd) {
+	background-color: rgb(49, 245, 0);
+}
+.sidebar2 .p1:nth-of-type(even) {
+	background-color: rgb(0, 4, 245);
+}
+.sidebar2 {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+	margin-top: 20px;
+}
+
+/*Псевдокласс отрицания*/
+/*Стиль применится ко всем абзацам за исключением .classy. Вместо р может быть любой тег, с простыми селекторами ( в т.ч. * , классы, идентификаторы, псевдоклассы). Нельзя использовать селекторы потомков, псевдоэлементы, групповые селекторы или комбинации в т.ч. смежные селекторы.  В одной стороке 1 :not */
+.sidebar3 :not(.p2c) {
+	background-color: rgb(49, 245, 0);
+}
+.sidebar3 {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+	margin-top: 20px;
+}
