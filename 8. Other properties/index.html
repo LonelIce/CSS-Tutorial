@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -273,6 +273,49 @@ display: none;/*скрывает элементы*/
 				<li>
 					<article>
 						<h2>dox-shadow, text-shadow</h2>
+						<span class="description"> Добавление тени</span>
+						<div>
+							CSS:
+							<pre>
+                <code>
+box-shadow: inset 0 0 8px 2px rgba(31, 8, 230, 0.1); /*доп.значение: тень внутри блока/горизонтальное смещение(+:право;-:влево)/вертикальное смещение(+:ниже;-:выше)/размытие тени/цвет.*/
+text-shadow: 0 0 8px 2px rgba(31, 8, 230, 0.1);
+                </code>
+              </pre>
+						</div>
+						<div>
+							Пример
+							<div class="b-sh1 b-sh">
+								box-shadow: inset 0 0 8px 2px rgba(31, 8, 230, 0.1);
+							</div>
+							<div class="b-sh2 b-sh">
+								box-shadow: 4px 6px 8px rgba(31, 8, 230, 0.75);
+							</div>
+							<div class="b-sh3 b-sh">
+								box-shadow: 0 0 8px 2px rgba(31, 8, 230, 0.75);
+							</div>
+							<div class="b-sh4 b-sh">
+								box-shadow: 10px 5px 8px rgb(31. 8, 230, 0.1), -5px -10px 20px
+								rgb(0,33,255);
+							</div>
+						</div>
+						Нюансы
+						<ul>
+							<li>Значения в px или em;</li>
+							<li>Задавать цвет лучше в RGBA;</li>
+							<li>
+								Можно добавлять несколько теней:
+								<code>
+									box-shadow: 10px 5px 8px rgb(31. 8, 230, 0.1), -5px -10px 20px
+									rgb(0,33,255);
+								</code>
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<article>
+						<h2>box-shadow, text-shadow</h2>
 						<span class="description"> Добавление тени</span>
 						<div>
 							CSS:
