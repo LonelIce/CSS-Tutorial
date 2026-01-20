@@ -1,0 +1,19 @@
+.float-present {
+	background-color: rgb(88, 84, 84);
+}
+
+.float-box {
+	width: 100px;
+	height: 100px;
+	border: 3px solid rgb(97, 156, 211);
+	background-color: rgb(66, 196, 189);
+	margin: 10px;
+}
+
+.fl-letf {
+	float: left;
+}
+
+.fl-right {
+	float: right;
+}
