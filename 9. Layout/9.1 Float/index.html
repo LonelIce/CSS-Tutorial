@@ -72,6 +72,24 @@ float: none;
 						suscipit ut accusamus facere exercitationem consequatur
 						necessitatibus sint quam.
 					</div>
+					<div>
+						Нюансы:
+						<ul>
+							<li>
+								Свойство float не лияет на фон и границы под плавающим
+								элементом. Чтобы их скрыть используй свойство overflof
+							</li>
+							<li>
+								Свойство clear сообщает браузеру о том, что форматируемый
+								элемент не должен обтекать плавающий элемент. Можно запретить
+								обтекание с любой стороны элемента:
+								<code>
+									clear:right/left/both(вызывает перемещение форматируемого
+									элемента вниз относительно плавающего)/none;</code
+								>
+							</li>
+						</ul>
+					</div>
 				</article>
 			</li>
 		</ul>
