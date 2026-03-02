@@ -445,6 +445,33 @@ background-attachment: scroll; /*По умолчанию*/
 						</div>
 					</article>
 				</li>
+				<li>
+					<article>
+						<h2>background-origin</h2>
+						<span class="description"
+							>Определение начальной позиции фонового изображения и настройка
+							отсечения</span
+						>
+						<div>
+							CSS
+							<pre>
+									<code>
+	background-origin: border-box; /*верхний левый угол границы*/
+	background-origin: padding-box; /*верхний левый угол отступа*/
+	background-origin: content-box; /*верхний левый угол области содержимого*/										
+									</code>
+								</pre>
+						</div>
+						Нюансы
+						<ul>
+							<li>
+								Эффективно используется со свойством
+								<code>background-clip</code>, которое ограничивает область
+								появления фонового изображения
+							</li>
+						</ul>
+					</article>
+				</li>
 			</ul>
 		</section>
 	</body>
