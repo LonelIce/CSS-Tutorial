@@ -365,6 +365,36 @@ text-shadow: 0 0 8px 2px rgba(31, 8, 230, 0.1);
 				</li>
 				<li>
 					<article>
+						<h2>background</h2>
+						<span class="description"
+							>Сокращенная запись для работы со свойствами, связанными с фоновым
+							изображением</span
+						>
+						<div>
+							CSS
+							<pre>
+								<code>
+background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Cid3LeSmj1evZ_KMblfWZZZJVPMZpyZRFQ&s)
+center center / 50% auto no-repeat; /*background-image/background-position/background-size/background-repeat/background-origin/background-clip/background-attachment/ background-color*/
+								</code>
+							</pre>
+						</div>
+						Нюансы
+						<ul>
+							<li>
+								Если указывается background-size и background-position, то их
+								нужно разделить "/";
+							</li>
+							<li>
+								Необязательно указывать все параметры. Но если свойства не
+								указаны то background применяет все значения по умолчанию,
+								отменяя ранее примененные стили.
+							</li>
+						</ul>
+					</article>
+				</li>
+				<li>
+					<article>
 						<h2>background-image</h2>
 						<span class="description">Добавляет фоновое изображение</span>
 						<div>
