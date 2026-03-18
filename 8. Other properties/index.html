@@ -408,6 +408,24 @@ background-image: url(https://i.pinimg.com/736x/2f/76/32/2f76324998c30661897575d
 								</code>
 							</pre>
 						</div>
+						Нюансы
+						<ul>
+							<li>
+								Можно сделать составное фоновое изображение (разделять запятой).
+								Для каждой картинки можно использовать отдельные свойства фона
+								типа positions или сокращенной записи background
+								<pre>
+									<code>
+body {
+	background-image:
+		url(../assets/abstr.jpg), /*Верх*/
+		url(../assets/abstr.jpg), /*центр+ заполнение*/
+		url(../assets/noob.jpg);/*Низ*/
+}	
+									</code>
+								</pre>
+							</li>
+						</ul>
 					</article>
 				</li>
 				<li>
