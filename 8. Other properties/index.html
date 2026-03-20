@@ -470,7 +470,27 @@ body {
 		#900 20px,
 		#fc0 30px,
 		#900 40px
-	);							
+	);	
+	
+	/*Радиальный градиент*/
+	background-image: radial-gradient(red, blue);
+
+	/*Круговой радиальный градиент*/
+	background-image: radial-gradient(circle, red, blue);
+
+	/*Центр позиционирован: 20% от левого края и 40% от верхнего*/
+	background-image: radial-gradient(circle at 20% 40%, red, blue);
+
+	/*Ключевыми словами можно указать до куда распространяется круг градиента*/
+	background-image: radial-gradient(closest-corner circle at 20% 40%, red, blue);
+
+	/*Можно создавать узлы*/
+	background-image: radial-gradient(circle at 20% 40%,red,	black 20%,	blue 30%);
+
+	/*Повторяющийся радиальный градиент*/
+	/*Для более плавного перехода хорошо бы заканчивать тем же цветом, с которого начали*/
+	background-image: repeating-radial-gradient(circle,red ,black 20px,blue 30px);
+
 									</code>
 								</pre>
 							</li>
