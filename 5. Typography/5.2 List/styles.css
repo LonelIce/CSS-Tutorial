@@ -66,6 +66,6 @@
 }
 
 /*Делаем картинку маркером*/
-.list-style-image {
+.list-style-image > ul > li {
 	list-style-image: url(assets/img/Nero-icon.png);
 }
