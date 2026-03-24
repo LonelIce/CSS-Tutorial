@@ -196,3 +196,31 @@ time:only-child {
 	border: solid;
 	margin-top: 20px;
 }
+
+.link-ps-el {
+	/*Для восприятия*/
+	width: 300px;
+	border: solid;
+	margin-top: 20px;
+}
+
+/*Меняет цвет непосещенной ссылки*/
+.link-ps:link {
+	color: green;
+}
+
+/*Меняет цвет посещенной ссылки*/
+/*В книге (большая книга 310 стр.) указано что могут быть ограничения по использованию данного псевдокласса*/
+.visited-ps:visited {
+	color: red;
+}
+
+/*Меняет цвет при наведении мыши*/
+.hover-ps:hover {
+	color: red;
+}
+
+/*Меняет цвет в момент нажатия на ссылку*/
+.active-ps:active {
+	color: gold;
+}
