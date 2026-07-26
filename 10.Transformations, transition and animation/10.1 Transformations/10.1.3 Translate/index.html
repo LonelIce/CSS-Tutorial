@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Трансформация перемещения</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../../../index.html">На главную</a>
+				<a href="../index.html">Назад</a>
+			</nav>
+		</header>
+		<h1>Перемещение</h1>
+		<div class="description">
+			Для перемещения элемента применяется свойство
+			<code
+				>transform: translate (/*горизонтальное смещение, вертикальное
+				смещение*/));</code
+			>
+		</div>
+		<h2>Нюансы</h2>
+		<ul>
+			<li>
+				Не перемещает сам элемент, а визуализирует его новое положение (может
+				перекрывать другой контент), оставляет пустое пространство, лучше
+				использовать абсолютное либо относительное позиционирование;
+			</li>
+			<li>px, em, % и тд.;</li>
+			<li>
+				Используется совместно с <code>:hover</code> и <code>:active</code>, для
+				небольших перемещений;
+			</li>
+			<li>Не забывай использовать префиксы для отдельных браузеров;</li>
+			<li>
+				Можно также использовать свойства <code>translateX()</code> и
+				<code>translateY()</code> для изменения по определенной оси.
+			</li>
+		</ul>
+		<h2>Примеры</h2>
+		<div class="examples">
+			<div class="example" id="example1"><code>translate(10px, 5px)</code></div>
+			<div class="example" id="example2">
+				<code>translate(-10px, -5px)</code>
+			</div>
+		</div>
+	</body>
+</html>

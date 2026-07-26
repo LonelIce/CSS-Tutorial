@@ -1,0 +1,29 @@
+.example {
+	width: 100px;
+	height: 100px;
+	background-color: brown;
+	margin: 50px;
+}
+#example1:hover {
+	transform: scale(0);
+}
+
+#example2:hover {
+	transform: scale(1);
+}
+
+#example3:hover {
+	transform: scale(2);
+}
+
+#example4:hover {
+	transform: scale(0.5);
+}
+
+#example5:hover {
+	transform: scale(0.1);
+}
+
+#example6:hover {
+	transform: scale(1.5, 1);
+}
