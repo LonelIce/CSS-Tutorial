@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Переходы</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Переходы</h1>
+		<div class="description">
+			Основным свойством для перехода является
+			<code>transition</code>. Для выполнения перехода необходимы:
+			<ol>
+				<li>Два стиля (начальный и конечный)</li>
+				<li>Свойство transition (как правило применяется к исходному стилю)</li>
+				<li>Инициатор (действие для запуска, например :hover)</li>
+			</ol>
+			<h2>Основа переходов</h2>
+			<ul>
+				<li>Какие свойства анимируются</li>
+				<li>Время анимации</li>
+				<li>Тип анимации</li>
+				<li>Отсрочка перед выполнением</li>
+			</ul>
+			<h2>Свойства переходы</h2>
+			<ul>
+				<li>
+					transition-property: Указывается изменяемое свойство, можно указать
+					ключевое свойство all или списком через запятую.
+					<code
+						>transition-property: background-color; transition-property:
+						background-color, color; transition-property: all;</code
+					>
+				</li>
+				<li>
+					transition-duration: Длительность анимации в s или ms. Можно указать
+					разную длительность для разных свойств:
+					<code>
+						transition-property: background-color, color; transition-duration:
+						1s, 5s;</code
+					>
+				</li>
+				<li>
+					transition-timing-function: регулирует скорость анимации. Может
+					принимать в себя ключевые слова (linear, ease(по умолчанию), ease-in,
+					ease-out и ease-in-out)
+					<code>transition-timing-function: linear;</code>, а также кривую Безье
+					<code
+						>transition-timing-function: cubic-bezier(.20, .96, .74, .07);</code
+					>
+					Наглядно сравнить можно
+					<a href="https://www.the-art-of-web.com/css/timing-function/">здесь</a
+					>. Визуализацию кривой Безье также можно найти в сети.
+				</li>
+				<li>
+					transition-delay: задает отсрочку начала анимации.
+					<code>transition-delay: .5s;</code>
+				</li>
+			</ul>
+		</div>
+		<h2>Нюансы</h2>
+		<ul>
+			<li>Работает во всех основных браузерах, но в IE только с 10 версии</li>
+			<li>
+				Можно анимировать следующие
+				<a href="https://www.w3.org/TR/css-transitions-1/#animatable-properties"
+					>свойства</a
+				>
+			</li>
+			<li>
+				Можно сократить написание свойств :
+				<code> transition: all 1s ease-in .5s;</code>. Минимальная запись:
+				<code> transition: all 1s;</code>. Или перечислением:
+				<code> transition: background-color 1s, color 2s;</code>
+			</li>
+		</ul>
+		<div class="examples">
+			<div class="example">
+				Без анимаций
+				<button id="exampleBtn1" class="exampleBtn">Example1</button>
+			</div>
+			<div class="example">
+				C простой анимацией
+				<button id="exampleBtn2" class="exampleBtn">Example2</button>
+			</div>
+			<div class="example">
+				transition-timing-function: linear;
+				<button id="exampleBtn3" class="exampleBtn">Example3</button>
+			</div>
+			<div class="example">
+				transition-timing-function: ease-out
+				<button id="exampleBtn4" class="exampleBtn">Example4</button>
+			</div>
+			<div class="example">
+				transition-timing-function: ease-in-out;
+				<button id="exampleBtn5" class="exampleBtn">Example5</button>
+			</div>
+			<div class="example">
+				transition-timing-function: ease-in-out;
+				<button id="exampleBtn6" class="exampleBtn">Example6</button>
+			</div>
+			<div class="example">
+				transition-timing-function: cubic-bezier(0.2, 0.96, 0.74, 0.07);
+				<button id="exampleBtn7" class="exampleBtn">Example7</button>
+			</div>
+			<div class="example">
+				transition-delay: 2s;
+				<button id="exampleBtn8" class="exampleBtn">Example8</button>
+			</div>
+		</div>
+	</body>
+</html>

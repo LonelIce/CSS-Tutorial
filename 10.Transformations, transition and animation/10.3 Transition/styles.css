@@ -1,0 +1,94 @@
+.example {
+	padding: 10px;
+	border: 4px dashed rgb(0, 0, 0);
+	width: 200px;
+	margin: 10px;
+}
+
+.exampleBtn {
+	width: 100px;
+	height: 40px;
+}
+
+#exampleBtn1 {
+	background-color: aqua;
+}
+
+#exampleBtn1:hover {
+	background-color: brown; /**/
+}
+
+#exampleBtn2 {
+	background-color: aqua;
+	transition-property: background-color;
+	transition-duration: 3s;
+}
+
+#exampleBtn2:hover {
+	background-color: brown;
+}
+
+#exampleBtn3 {
+	background-color: aqua;
+	transition-property: background-color;
+	transition-duration: 3s;
+	transition-timing-function: linear;
+}
+
+#exampleBtn3:hover {
+	background-color: brown;
+}
+#exampleBtn4 {
+	background-color: aqua;
+	transition-property: background-color;
+	transition-duration: 3s;
+	transition-timing-function: ease-in;
+}
+
+#exampleBtn4:hover {
+	background-color: brown;
+}
+
+#exampleBtn5 {
+	background-color: aqua;
+	transition-property: background-color;
+	transition-duration: 3s;
+	transition-timing-function: ease-out;
+}
+
+#exampleBtn5:hover {
+	background-color: brown;
+}
+
+#exampleBtn6 {
+	background-color: aqua;
+	transition-property: background-color;
+	transition-duration: 3s;
+	transition-timing-function: ease-in-out;
+}
+
+#exampleBtn6:hover {
+	background-color: brown;
+}
+
+#exampleBtn7 {
+	background-color: aqua;
+	transition-property: background-color;
+	transition-duration: 3s;
+	transition-timing-function: cubic-bezier(0.2, 0.96, 0.74, 0.07);
+}
+
+#exampleBtn7:hover {
+	background-color: brown;
+}
+
+#exampleBtn8 {
+	background-color: aqua;
+	transition-property: background-color;
+	transition-duration: 3s;
+	transition-delay: 2s;
+}
+
+#exampleBtn8:hover {
+	background-color: brown;
+}
