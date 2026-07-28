@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Анимация</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Анимация</h1>
+		<h2>Основы анимации</h2>
+		<ul>
+			<li>Создание ключевых кадров со списком анимированных свойств</li>
+			<li>Применение анимации к элементу анимации</li>
+		</ul>
+		<h2>Свойства переходы</h2>
+
+		<h2>Нюансы</h2>
+		<ul>
+			<li>
+				Работает во всех основных браузерах, но в IE только с 10 версии. Поэтому
+				необходимы вендорные префиксы. То есть нужно написать 2 анимации: с
+				префиксами и без.
+			</li>
+			<li>Основным преимуществом является необязательный инициатор</li>
+			<li>
+				Лучше добавлять кавычки в имени анимации, чтобы избежать конфликтов с
+				ключевыми словами.
+			</li>
+		</ul>
+		<h2>Порядок работы</h2>
+		<ol>
+			<li>
+				Настройка ключевых кадров:
+
+				<code>
+					<pre>
+@keyframes имяАнимации {
+  from{
+    /*свойства css начального кадра*/      
+  }
+
+	50%{
+		/*свойства css*/
+	}
+
+	70%, 80%{
+		/*свойства css c 70% по 80% (без кадра ниже)*/
+	}
+
+	75%,85%{
+		/*свойства css. С кадром выше произойдет попеременное изменение на 75%, 80% и 85%*/
+	}
+
+  to{
+    /*свойства css конечного кадра*/   
+  }
+}								
+							</pre
+					>
+				</code>
+				Кадров не должно быть меньше 2х, логично же. Ключевое слово from можно
+				заменить на 0%, а to на 100%.
+			</li>
+			<li>
+				Применяем анимацию к конкретному элементу или псевдоклассу
+				<code>
+					<pre>
+.example {
+	-webkit-animation-name: 'имяАнимации';
+	-webkit-animation-duration: 1s;
+	animation-name: 'имяАнимации';
+	animation-duration: 1s; /*продолжительность анимации*/
+	animation-name: 'fadeIn', 'blink'; /*пример добавления нескольких анимаций*/
+	animation-duration: 1s, 2s; /*продолжительность анимациq*/
+}					
+							</pre
+					>
+				</code>
+			</li>
+			<li>
+				Можно добавить тайминг анимации
+				<code>animation-timing-function: ease;</code> Может принимать в себя
+				ключевые слова (linear, ease(по умолчанию), ease-in, ease-out и
+				ease-in-out) или кривую Безье. Можно применять как к элементу, так и к
+				отдельным кадрам. Не забудь про префиксы!
+			</li>
+			<li>
+				Можно добавить отсрочку старта анимации
+				<code> animation-delay:2s;</code> Не забудь про префиксы!
+			</li>
+			<li>
+				Настраиваем повторение анимации. Свойство
+				<code>animation-iteration-count: /*значение*/;</code> принимает в себя
+				число, либо ключевое слово infinite для бесконечного повторения.
+			</li>
+			<li>
+				Чтобы анимация при нечетных воспроизведениях проигрывалась вперед, а при
+				четных назад используется свойство (к анимированному элементу) со
+				значением <code>animation-direction: alternative;</code>. Также нужно
+				добавить <code>animation-iteration-count: 2;</code>
+			</li>
+			<li>
+				Чтобы сохранить элементу вид по окончанию анимации (например при выходе
+				курсора), нужно добавить свойство (к анимированному элементу)
+				<code>animation-fill-mode: forwards;</code>
+			</li>
+			<li>
+				Можно сократить запись:
+				<pre>
+					<code>
+.example {
+	animation-name: fadeIn;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 5s;
+	animation-iteration-count: 2;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}						
+					</code>
+				</pre>
+				на
+				<pre>
+					<code>
+.example {
+	animation: fadeIn 2s ease-in-out 5s 2 alternate forwards;
+}						
+					</code>
+				</pre>
+				Важно соблюдать порядок. И запятые если анимаций несколько. Обязательны
+				только имя анимации и длительность. И не забывать про вендорные
+				префиксы.
+			</li>
+			<li>
+				Можно еще управлять паузой и воспроизведением анимации. Например при
+				наведении курсора анимация должна приостановиться. Для этого
+				используется свойство
+				<code
+					>animation-play-state:/*running для запуска и paused для
+					остановки*/</code
+				>
+				Опять же не забывать про префиксы.
+			</li>
+		</ol>
+		<h3>Примеры</h3>
+		<div class="examples">
+			<div class="example">
+				Простая анимация<button class="exampleBtn" id="exampleBtn1">
+					Кнопка
+				</button>
+			</div>
+			<div class="example">
+				Анимация с другим таймингом (ease-out)<button
+					class="exampleBtn"
+					id="exampleBtn2"
+				>
+					Кнопка
+				</button>
+			</div>
+			<div class="example">
+				Отсрочка старта на 1 сек<button class="exampleBtn" id="exampleBtn3">
+					Кнопка
+				</button>
+			</div>
+			<div class="example">
+				Бесконечное повторение c возращением назад<button
+					class="exampleBtn"
+					id="exampleBtn4"
+				>
+					Кнопка
+				</button>
+			</div>
+			<div class="example">
+				Бесконечное повторение c возращением назад с возможностью паузы<button
+					class="exampleBtn"
+					id="exampleBtn5"
+				>
+					Кнопка
+				</button>
+			</div>
+		</div>
+	</body>
+</html>

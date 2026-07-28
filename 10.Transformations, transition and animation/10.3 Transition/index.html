@@ -15,49 +15,50 @@
 				<li>Свойство transition (как правило применяется к исходному стилю)</li>
 				<li>Инициатор (действие для запуска, например :hover)</li>
 			</ol>
-			<h2>Основа переходов</h2>
-			<ul>
-				<li>Какие свойства анимируются</li>
-				<li>Время анимации</li>
-				<li>Тип анимации</li>
-				<li>Отсрочка перед выполнением</li>
-			</ul>
-			<h2>Свойства переходы</h2>
-			<ul>
-				<li>
-					transition-property: Указывается изменяемое свойство, можно указать
-					ключевое свойство all или списком через запятую.
-					<code
-						>transition-property: background-color; transition-property:
-						background-color, color; transition-property: all;</code
-					>
-				</li>
-				<li>
-					transition-duration: Длительность анимации в s или ms. Можно указать
-					разную длительность для разных свойств:
-					<code>
-						transition-property: background-color, color; transition-duration:
-						1s, 5s;</code
-					>
-				</li>
-				<li>
-					transition-timing-function: регулирует скорость анимации. Может
-					принимать в себя ключевые слова (linear, ease(по умолчанию), ease-in,
-					ease-out и ease-in-out)
-					<code>transition-timing-function: linear;</code>, а также кривую Безье
-					<code
-						>transition-timing-function: cubic-bezier(.20, .96, .74, .07);</code
-					>
-					Наглядно сравнить можно
-					<a href="https://www.the-art-of-web.com/css/timing-function/">здесь</a
-					>. Визуализацию кривой Безье также можно найти в сети.
-				</li>
-				<li>
-					transition-delay: задает отсрочку начала анимации.
-					<code>transition-delay: .5s;</code>
-				</li>
-			</ul>
 		</div>
+		<h2>Основа переходов</h2>
+		<ul>
+			<li>Какие свойства анимируются</li>
+			<li>Время анимации</li>
+			<li>Тип анимации</li>
+			<li>Отсрочка перед выполнением</li>
+		</ul>
+		<h2>Свойства переходы</h2>
+		<ul>
+			<li>
+				transition-property: Указывается изменяемое свойство, можно указать
+				ключевое свойство all или списком через запятую.
+				<code
+					>transition-property: background-color; transition-property:
+					background-color, color; transition-property: all;</code
+				>
+			</li>
+			<li>
+				transition-duration: Длительность анимации в s или ms. Можно указать
+				разную длительность для разных свойств:
+				<code>
+					transition-property: background-color, color; transition-duration: 1s,
+					5s;</code
+				>
+			</li>
+			<li>
+				transition-timing-function: регулирует скорость анимации. Может
+				принимать в себя ключевые слова (linear, ease(по умолчанию), ease-in,
+				ease-out и ease-in-out)
+				<code>transition-timing-function: linear;</code>, а также кривую Безье
+				<code
+					>transition-timing-function: cubic-bezier(.20, .96, .74, .07);</code
+				>
+				Наглядно сравнить можно
+				<a href="https://www.the-art-of-web.com/css/timing-function/">здесь</a>.
+				Визуализацию кривой Безье также можно найти в сети.
+			</li>
+			<li>
+				transition-delay: задает отсрочку начала анимации.
+				<code>transition-delay: .5s;</code>
+			</li>
+		</ul>
+
 		<h2>Нюансы</h2>
 		<ul>
 			<li>Работает во всех основных браузерах, но в IE только с 10 версии</li>
