@@ -1,17 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Таблицы</title>
+		<title>Форматирование таблиц</title>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
-
 	<body>
-		<!--Таблица стилизованая-->>
-		<div id="table">
-			<div id="tableRow">
-				<div id="main">Майн</div>
-				<div id="sidebar">Cайlбар</div>
-			</div>
+		<nav>
+			<a href="../index.html">На главную</a>
+		</nav>
+		<h1>Форматирование таблиц</h1>
+		<div>
+			<h2>Нюансы стилизации таблиц</h2>
+			<ul>
+				<li>
+					Отступы не применяются к самой таблице, а к заголовкам и ячейкам:
+					<code>td,th {padding:10px;}</code>;
+				</li>
+				<li>
+					Между ячейками браузер создает интервал (обычно 2px). его можно
+					изменить свойством <code>border-spacing</code>
+				</li>
+				<li>
+					Для того чтобы убрать промежутки между ячейками используется свойство
+					<code>border-collapse: collapse;</code>. При этом
+					<code>border-spacing</code> и <code>border-radius</code> работать не
+					будет.
+				</li>
+				<li>
+					Можно добавить тень <code>box-shadow</code> (применять к таблице или
+					отдельной ячейке)
+				</li>
+				<li>
+					Можно применять селектор
+					<code>nth-of-type(odd) и nth-of-type(even)</code> для чередования
+					цвета фона например (<a
+						href="../4.0 Pseudo-elements and pseudo-classes/index.html"
+						>подробнее</a
+					>).
+				</li>
+				<li>
+					Для форматирования столбцов следует использовать html-элементы
+					<code>col</code> и <code>colgroup</code>. С помощью их можно
+					регулировать только два набора свойств: ширину всех строк в столбце и
+					свойства фона.
+				</li>
+			</ul>
 		</div>
+		<table>
+			<tr>
+				<td class="algn algn1">text-align: right;</td>
+				<td class="algn algn2">text-align: left;</td>
+				<td class="algn algn3">text-align: center;</td>
+				<td class="algn algn4">text-align: justify;</td>
+			</tr>
+			<tr>
+				<td class="vAlgn vAlgn1">vertical-align: top;</td>
+				<td class="vAlgn vAlgn2">
+					vertical-align: baseline; Выравнивает каждую первую строку текста в
+					каждой ячейке строки таблицы
+				</td>
+				<td class="vAlgn vAlgn3">vertical-align: middle;</td>
+				<td class="vAlgn vAlgn4">vertical-align: bottom;</td>
+			</tr>
+			<tr>
+				<td class="brTd1">border-radius: 0;</td>
+				<td class="brTd2">border-radius: 5px;</td>
+				<td class="brTd3">border-radius: 20%;</td>
+				<td class="brTd4">border-radius: 50%;</td>
+			</tr>
+		</table>
+		<table class="bsTables bsTable2">
+			<tr>
+				<td>border-spacing: 2px;</td>
+				<td>border-spacing: 2px;</td>
+				<td>border-spacing: 2px;</td>
+			</tr>
+		</table>
+		<table class="bsTables bsTable1">
+			<tr>
+				<td>border-spacing: 0; border-collapse: separate;</td>
+				<td>border-spacing: 0; border-collapse: separate;</td>
+				<td>border-spacing: 0; border-collapse: separate;</td>
+			</tr>
+		</table>
+		<table class="bsTables bsTable3">
+			<tr>
+				<td>border-spacing: 0; border-collapse: collapse;</td>
+				<td>border-spacing: 0; border-collapse: collapse;</td>
+				<td>border-spacing: 0; border-collapse: collapse;</td>
+			</tr>
+		</table>
 	</body>
 </html>

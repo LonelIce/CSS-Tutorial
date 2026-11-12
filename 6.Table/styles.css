@@ -1,0 +1,75 @@
+td,
+th {
+	padding: 10px;
+	border: 2px solid black;
+}
+
+.algn,
+.vAlgn {
+	width: 200px;
+}
+.algn1 {
+	text-align: right;
+}
+.algn2 {
+	text-align: left;
+}
+.algn3 {
+	text-align: center;
+}
+.algn4 {
+	text-align: justify;
+}
+
+.vAlgn {
+	height: 200px;
+}
+.vAlgn1 {
+	vertical-align: top;
+}
+
+.vAlgn2 {
+	vertical-align: baseline;
+}
+
+.vAlgn3 {
+	vertical-align: middle;
+}
+
+.vAlgn4 {
+	vertical-align: bottom;
+}
+
+.bsTables {
+	margin-top: 10px;
+}
+
+.bsTable1 {
+	border-spacing: 0;
+	border-collapse: separate;
+}
+
+.bsTable2 {
+	border-spacing: 2px;
+}
+
+.bsTable3 {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.brTd1 {
+	border-radius: 0;
+}
+
+.brTd2 {
+	border-radius: 5px;
+}
+
+.brTd3 {
+	border-radius: 20%;
+}
+
+.brTd4 {
+	border-radius: 50%;
+}
